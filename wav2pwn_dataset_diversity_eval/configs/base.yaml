@@ -1,0 +1,43 @@
+seed: 13
+
+paths:
+  root_results_dir: results
+  root_artifacts_dir: artifacts
+  root_logs_dir: logs
+  model_registry: configs/models.yaml
+
+datasets:
+  librispeech:
+    name: LibriSpeech
+    root: ../dataset/LibriSpeech_wav
+    sample_count: 100
+    allow_test_clean: true
+  commonvoice:
+    name: CommonVoice_wav
+    root: ../dataset/CommonVoice_wav
+    sample_count: 100
+  voxpopuli:
+    name: voxpopuli
+    root: ../dataset/voxpopuli
+    sample_count: 100
+
+experiment:
+  target_phrase: OPEN THE DOOR
+  target_repeat: 2
+  attack_method: adam
+  epsilon: 0.01
+  alpha: 0.001
+  iterations: 200
+  l2_weight: 0.0001
+  random_start: true
+  cer_threshold: 0.5
+  wer_threshold: 0.5
+  attack_modes: [targeted]
+  probing_subset_size: 200
+  clustering_metric: cosine
+  tsne_perplexity: 5
+
+runtime:
+  device: cuda
+  save_audio: true
+  batch_notes: independent_per_dataset

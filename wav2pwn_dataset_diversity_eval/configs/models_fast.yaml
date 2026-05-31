@@ -1,0 +1,13 @@
+models:
+  - id: wav2vec2_base_100h
+    hf_name: facebook/wav2vec2-base-100h
+    family: wav2vec2
+  - id: hubert_large_ls960_ft
+    hf_name: facebook/hubert-large-ls960-ft
+    family: hubert
+  - id: wav2vec2_conformer_rope_large_100h_ft
+    hf_name: facebook/wav2vec2-conformer-rope-large-100h-ft
+    family: conformer_rope
+  - id: wav2vec2_base_10k_voxpopuli_ft_en
+    hf_name: facebook/wav2vec2-base-10k-voxpopuli-ft-en
+    family: voxpopuli_ft

@@ -1,0 +1,53 @@
+target_groups:
+  - name: Commercial black-box APIs
+    description: >
+      Targets reproduced from the paper's commercial API table. These entries
+      intentionally preserve unresolved model metadata when the paper did not
+      disclose exact API versions or model identifiers.
+    targets:
+      - id: google_cloud_stt_unspecified
+        display_name: Google Cloud STT
+        provider: Google Cloud
+        product: Speech-to-Text
+        api_version: unspecified
+        model_name: unspecified_in_paper
+        reproducibility_status: unresolved_model_metadata
+        notes: Reproduction-only row matching the paper's original naming.
+      - id: azure_speech_unspecified
+        display_name: Azure
+        provider: Microsoft Azure
+        product: Azure AI Speech
+        api_version: unspecified
+        model_name: unspecified_in_paper
+        reproducibility_status: unresolved_model_metadata
+        notes: Reproduction-only row matching the paper's original naming.
+      - id: amazon_transcribe_unspecified
+        display_name: Amazon Transcribe
+        provider: AWS
+        product: Amazon Transcribe
+        api_version: unspecified
+        model_name: unspecified_in_paper
+        reproducibility_status: unresolved_model_metadata
+        notes: Reproduction-only row matching the paper's original naming.
+      - id: ibm_watson_stt_unspecified
+        display_name: IBM Watson
+        provider: IBM Cloud
+        product: Watson Speech to Text
+        api_version: unspecified
+        model_name: unspecified_in_paper
+        reproducibility_status: unresolved_model_metadata
+        notes: Reproduction-only row matching the paper's original naming.
+  - name: Modern foundation ASR APIs
+    description: >
+      Explicit follow-up targets used to test whether the paper's commercial
+      API conclusions still hold on newer foundation-style ASR endpoints with
+      disclosed model identifiers.
+    targets:
+      - id: google_cloud_stt_v2_chirp_3
+        display_name: Google Cloud STT v2 (chirp_3)
+        provider: Google Cloud
+        product: Speech-to-Text
+        api_version: v2
+        model_name: chirp_3
+        reproducibility_status: explicit_model_metadata
+        notes: Recommended first follow-up target for the reviewer comment.

@@ -1,0 +1,12 @@
+torch
+torchaudio
+transformers
+datasets
+evaluate
+jiwer
+tensorboard
+PyYAML
+pandas
+matplotlib
+accelerate
+soundfile

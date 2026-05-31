@@ -1,0 +1,14 @@
+torch
+torchaudio
+transformers
+datasets
+jiwer
+matplotlib
+seaborn
+pandas
+numpy
+scikit-learn
+PyYAML
+soundfile
+tqdm
+scipy
